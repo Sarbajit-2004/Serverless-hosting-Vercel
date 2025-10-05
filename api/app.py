@@ -4,6 +4,9 @@ from typing import List, Dict, Any, Optional
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 import json
+# app.py  (at repo root)
+from api.latency import app
+
 
 app = FastAPI()
 
@@ -75,3 +78,4 @@ async def latency_metrics(request: Request):
 
     # Order doesn't matter per the assignment
     return {"regions": results}
+
